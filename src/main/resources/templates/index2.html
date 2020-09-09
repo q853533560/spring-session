@@ -1,0 +1,27 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+ID：<span th:text="${user.id}"></span><br>
+Name:<span th:text="${user.name}"></span><br>
+Age：<span th:text="${user.age}"></span><br>
+<table>
+<tr>
+    <th>编号</th>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>index</th>
+</tr>
+<tr th:each="user,stat:${list}">
+    <th th:text="${user.id}"></th>
+    <th th:text="${user.name}"></th>
+    <th th:text="${user.age}"> </th>
+    <th th:text="${stat.index}"></th>
+</tr>
+</table>
+</body>
+</html>
